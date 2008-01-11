@@ -1,6 +1,6 @@
 %define module	XML-NamespaceSupport
 %define version 1.09
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary:	%{module} module for perl
 Name:		perl-%{module}
@@ -12,7 +12,6 @@ Source0:	%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}/
 BuildRequires:	perl-devel
 BuildRoot:	%{_tmppath}/%{name}-buildroot/
-Requires:	perl
 BuildArch:	noarch
 
 %description
