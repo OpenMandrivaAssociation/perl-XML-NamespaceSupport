@@ -1,6 +1,6 @@
 %define module	XML-NamespaceSupport
-%define version 1.09
-%define release %mkrel 6
+%define version 1.10
+%define release %mkrel 1
 
 Summary:	%{module} module for perl
 Name:		perl-%{module}
