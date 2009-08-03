@@ -1,18 +1,18 @@
-%define module	XML-NamespaceSupport
-%define version 1.10
-%define release %mkrel 1
+%define upstream_name	 XML-NamespaceSupport
+%define upstream_version 1.10
 
-Summary:	%{module} module for perl
-Name:		perl-%{module}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:	%{upstream_name} module for perl
 License:	MPL
 Group:		Development/Perl
-Source0:	%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}/
-BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot/
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module offers a simple to process namespaced XML names (unames) from
@@ -20,8 +20,7 @@ within any application that may need them. It also helps maintain a prefix
 to namespace URI map, and provides a number of basic checks.
 
 %prep
-%setup -q -n %{module}-%{version}
-
+%setup -q -n %{upstream_name}-%{upstream_version}
 chmod 644 Changes README
 
 %build
@@ -43,5 +42,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorlib}/XML/*.pm
 %{_mandir}/*/*
-
-
