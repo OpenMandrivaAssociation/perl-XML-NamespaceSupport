@@ -24,7 +24,7 @@ to namespace URI map, and provides a number of basic checks.
 chmod 644 Changes README
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+%{__perl} Makefile.PL INSTALLDIRS=vendor --skipdeps
 make
 
 %check
