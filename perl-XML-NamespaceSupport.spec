@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:	%{upstream_name} module for perl
 License:	MPL
@@ -25,10 +25,10 @@ chmod 644 Changes README
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor --skipdeps
-make
+%make
 
 %check
-make test
+%make test
 
 %clean
 rm -rf $RPM_BUILD_ROOT
