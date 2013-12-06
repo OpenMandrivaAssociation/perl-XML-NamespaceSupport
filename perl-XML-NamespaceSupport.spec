@@ -4,7 +4,7 @@
 Summary:	%{modname} module for perl
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	10
+Release:	11
 License:	MPL
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
