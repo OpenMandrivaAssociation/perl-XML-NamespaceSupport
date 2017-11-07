@@ -1,10 +1,10 @@
 %define modname	XML-NamespaceSupport
-%define modver	1.11
+%define modver	1.12
 
 Summary:	%{modname} module for perl
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	20
+Release:	1
 License:	MPL
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
@@ -35,4 +35,3 @@ chmod 644 Changes README
 %doc Changes README
 %{perl_vendorlib}/XML/*.pm
 %{_mandir}/man3/*
-
